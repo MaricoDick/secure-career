@@ -54,26 +54,26 @@ export const ResumeManager = () => {
 
   if (!isConnected) {
     return (
-      <div className="mx-auto text-center max-w-2xl">
-        <div className="glass-card rounded-3xl p-12 shadow-2xl">
-          <div className="text-6xl mb-6">👋</div>
-          <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+      <div className="mx-auto text-center max-w-2xl fade-in-up">
+        <div className="glass-card rounded-3xl p-12 shadow-2xl hover-lift">
+          <div className="text-6xl mb-6 float-animation">👋</div>
+          <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-purple-600 via-pink-500 to-blue-600 bg-clip-text text-transparent">
             Welcome to Secure Career
           </h2>
           <p className="text-gray-700 text-lg mb-6 leading-relaxed">
-            Connect your wallet to securely store and manage your resume with privacy-preserving encryption. 
-            <span className="block mt-2">🔐 Your data, your privacy, your control.</span>
+            Connect your wallet to securely store and manage your resume with privacy-preserving encryption.
+            <span className="block mt-2 text-purple-600 font-semibold">🔐 Your data, your privacy, your control.</span>
           </p>
-          <div className="bg-gradient-to-r from-purple-50 to-blue-50 rounded-2xl p-6 mb-6">
+          <div className="bg-gradient-to-r from-purple-50 to-blue-50 rounded-2xl p-6 mb-6 hover-lift">
             <p className="text-sm text-gray-700 leading-relaxed">
-              <span className="text-2xl mr-2">✨</span>
-              Your skills and qualifications will be stored encrypted, allowing HR to evaluate matches 
+              <span className="text-2xl mr-2 float-animation">✨</span>
+              Your skills and qualifications will be stored encrypted, allowing HR to evaluate matches
               without seeing sensitive details. Privacy-first, always.
             </p>
           </div>
           {isLocalNetwork && (
-            <div className="inline-flex items-center space-x-2 bg-blue-100/80 backdrop-blur-sm rounded-full px-4 py-2 text-blue-800 text-sm font-medium">
-              <span>🔧</span>
+            <div className="inline-flex items-center space-x-2 bg-blue-100/80 backdrop-blur-sm rounded-full px-4 py-2 text-blue-800 text-sm font-medium pulse-glow">
+              <span className="float-animation">🔧</span>
               <span>Connected to local Hardhat network (Chain ID: {chainId})</span>
             </div>
           )}
@@ -98,11 +98,11 @@ export const ResumeManager = () => {
 
   return (
     <div className="w-full max-w-5xl mx-auto">
-      <div className="mb-10 text-center">
-        <div className="glass-card rounded-3xl p-8 shadow-2xl mb-6">
+      <div className="mb-10 text-center fade-in-up">
+        <div className="glass-card rounded-3xl p-8 shadow-2xl mb-6 hover-lift">
           <div className="flex items-center justify-center space-x-3 mb-4">
-            <span className="text-5xl">💼</span>
-            <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+            <span className="text-5xl float-animation">💼</span>
+            <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-600 via-pink-500 to-blue-600 bg-clip-text text-transparent">
               Secure Career
             </h1>
           </div>
@@ -110,11 +110,11 @@ export const ResumeManager = () => {
             Privacy-preserving resume storage with fully homomorphic encryption
           </p>
           <div className="flex justify-center items-center space-x-3 flex-wrap gap-2">
-            <span className={`px-4 py-2 rounded-full text-sm font-medium shadow-md backdrop-blur-sm bg-${networkInfo.color}-100/80 text-${networkInfo.color}-800`}>
+            <span className={`px-4 py-2 rounded-full text-sm font-medium shadow-md backdrop-blur-sm bg-${networkInfo.color}-100/80 text-${networkInfo.color}-800 pulse-glow`}>
               {networkInfo.icon} {networkInfo.status === "local" ? "Local Hardhat Network" :
                                  networkInfo.status === "sepolia" ? "Sepolia Testnet" : "Unknown Network"}
             </span>
-            <span className="px-4 py-2 bg-white/60 backdrop-blur-sm rounded-full text-sm text-gray-700 font-medium shadow-md">
+            <span className="px-4 py-2 bg-white/60 backdrop-blur-sm rounded-full text-sm text-gray-700 font-medium shadow-md hover-lift">
               Chain ID: {chainId}
             </span>
           </div>
